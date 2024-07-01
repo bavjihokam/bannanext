@@ -16,5 +16,10 @@ const noteSchema = mongoose.Schema({
   pinned:{
     type:Boolean,
     default:false,
-  },{timestamps:true }
-})
+  },
+},
+{timestamps:true }
+);
+
+const Note = mongoose.models.Note || mongoose.model("Note", noteSchema);
+export default Note;
