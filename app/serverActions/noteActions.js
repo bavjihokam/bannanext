@@ -1,5 +1,5 @@
 "use server"
-import {auth} from "auth";
+import {auth} from "next/auth";
 
 export async function addNote(formdata){
   try{
