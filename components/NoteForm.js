@@ -1,4 +1,4 @@
-import {addNote} from "../serverActions/noteActions":
+import {addNote} from "../serverActions/noteActions";
 "use client"
 export default function NoteForm() {
   const handleSubmit = (event) => {
