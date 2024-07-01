@@ -1,6 +1,6 @@
 import TopBar from "../components/TopBar";
 import HeroSection from "../components/HeroSection";
-import LinksSection from "../components/LinksSection";
+import LinksSection from "../components/LinkSection";
 
 export default function Home() {
   return (
