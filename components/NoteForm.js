@@ -1,3 +1,4 @@
+"use client"
 export default function NoteForm() {
   const handleSubmit = (event) => {
     event.preventDefault();
