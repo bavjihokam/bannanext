@@ -13,7 +13,7 @@ export default function NoteForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col max-w-md mx-auto m">
+    <form onSubmit={handleSubmit} className="flex flex-col max-w-md mx-auto mt-20">
       <label htmlFor="title" className="mb-2 font-bold">Title</label>
       <input type="text" id="title" name="title" className="mb-4 p-2 border rounded" required />
 
