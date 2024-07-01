@@ -5,7 +5,7 @@ export default function AddNote() {
   return (
     <main className="flex min-h-screen flex-col items-center p-10">
       <TopBar />
-      <h1 className="text-3xl font-bold mb-8 mt-20">Add a New Note</h1>
+      <h1 className="text-3xl font-bold mb-8 mt-25">Add a New Note</h1>
       <NoteForm />
     </main>
   );
