@@ -1,5 +1,5 @@
-import NoteForm from "../../../components/NoteForm";
-import TopBar from "../../../components/TopBar";
+import NoteForm from "../../components/NoteForm";
+import TopBar from "../../components/TopBar";
 
 export default function AddNote() {
   return (
