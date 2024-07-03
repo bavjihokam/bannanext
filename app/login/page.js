@@ -1,7 +1,7 @@
 "use client"
 import React from 'react';
 import Link from "next/link";
-import { useFormState } from "react/dom";
+import { useFormState } from "react-dom";
 import { authenticate } from "../serverActions/userActions";
 
 const Login = () => {
