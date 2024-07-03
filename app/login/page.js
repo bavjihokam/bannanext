@@ -5,7 +5,7 @@ import { useFormState } from "react-dom";
 import { authenticate } from "../serverActions/userActions";
 
 const Login = () => {
-  const [errorMessage, dispatch] =useFormState(increment, undefined);
+  const [errorMessage, dispatch] =useFormState(increament, undefined);
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
       <div className="w-full max-w-md p-8 space-y-6 bg-white rounded-lg shadow-md">
