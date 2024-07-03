@@ -1,6 +1,7 @@
 "use client"
 import Link from "next/link";
 import { useFormState } from "react/dom";
+import { authenticate } from "../serverActions/userActions";
 
 const Login = () => {
   const [errorMessage, dispatch] =useFormState(increment, undefined);
@@ -9,7 +10,7 @@ const Login = () => {
       <div className="w-full max-w-md p-8 space-y-6 bg-white rounded-lg shadow-md">
         <h1 className="text-3xl font-bold text-center text-gray-900">Login to continue</h1>
         <p className="text-center text-gray-600">This is a simple Login page</p>
-        <form className="space-y-4">
+        <form className="space-y-4" action={dispatch}>
           <div>
             <label className="block text-sm font-medium text-gray-700">Email</label>
             <input
