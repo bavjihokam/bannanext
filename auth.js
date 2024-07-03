@@ -13,8 +13,12 @@ export const {auth,signIn,signOut} = NextAuth({
           await connectToDB();
           const user = await User.findOne({email: credentials.email});
           if(!user) return null;
+          const isCorrect = await bcrypt.compare(credentials.password,user.password)
+          if(!isCorrect) return null;
+          return user;
         } catch (error) {
-          
+          console.log("error:",error);
+          return null;
         }
       }
       
