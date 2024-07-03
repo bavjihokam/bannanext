@@ -7,7 +7,7 @@ export const {auth,signIn,signOut} = NextAuth({
   providers: [
     Credentials({
       async authorize(credentials){
-        console.log("these ate the credentials:",credentials);
+        console.log("these are the credentials:",credentials);
         return null;
       }
       
