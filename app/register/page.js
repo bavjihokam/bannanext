@@ -8,17 +8,26 @@ const Register = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setInfo({
-      ...info,
-      [name]: value,
-    });
+    setInfo((prev)=>({
+      ...prev,
+      [e.target.name]: e.target.value,
+    }));
   };
 
-  const handleSubmit = (e) => {
+  async function handleSubmit (e) {
     e.preventDefault();
+    if(!info.username||!info.email||!info.password){
     setPending(true);
-    setFeedback('');
-
+    setFeedback((prev)=>({...prev,type:"error",msg:'Registration successful!'}))
+    return;
+}
+setPending(true);
+try {
+  
+} catch (error) {
+  
+}
+}
     // Simulate an API call
     setTimeout(() => {
       setPending(false);
