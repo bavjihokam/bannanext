@@ -21,3 +21,11 @@ export async function authenticate(prevState,formData){
   }
 }
 
+export async function registerUser(info){
+  try {
+    await connectToDB();
+    const {username,email,password} = info;
+  } catch (error) {
+    
+  }
+}
