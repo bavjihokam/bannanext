@@ -24,7 +24,7 @@ const Register = () => {
 }
 setPending(true);
 try {
-  const res = await registerUser(info)
+  const res = await registerUser(info);
   
 } catch (error) {
 }
