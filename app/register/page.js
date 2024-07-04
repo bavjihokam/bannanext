@@ -29,11 +29,8 @@ try {
 } catch (error) {
 }
 }
-    // Simulate an API call
-    setTimeout(() => {
-      setPending(false);
-      setFeedback('Registration successful!');
-    }, 2000);
+    
+    
   };
 
   return (
