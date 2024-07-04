@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 
 const Register = () => {
   const [info, setInfo] = useState({ username: '', email: '', password: '' });
-  const [feedback, setFeedback] = useState('');
+  const [feedback, setFeedback] = useState({type: "", msg: ""});
   const [pending, setPending] = useState(false);
 
   const handleChange = (e) => {
