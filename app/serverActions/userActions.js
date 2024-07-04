@@ -25,6 +25,8 @@ export async function registerUser(info){
   try {
     await connectToDB();
     const {username,email,password} = info;
+    const exists = await User.findOne({$or:[{email},{username}]});
+    cosole.log({error});
   } catch (error) {
     
   }
