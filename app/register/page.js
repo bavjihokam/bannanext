@@ -1,5 +1,6 @@
 "use client"
 import React, { useState } from 'react';
+import {registerUser} from "../serverActions/userActions";
 
 const Register = () => {
   const [info, setInfo] = useState({ username: '', email: '', password: '' });
