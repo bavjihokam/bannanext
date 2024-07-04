@@ -24,9 +24,9 @@ const Register = () => {
 }
 setPending(true);
 try {
+  const res = await registerUser(info)
   
 } catch (error) {
-  
 }
 }
     // Simulate an API call
