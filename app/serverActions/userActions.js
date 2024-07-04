@@ -16,5 +16,7 @@ export async function authenticate(prevState,formData){
           return "Something went wrong,";
       }
     }
+    
+    throw error;
   }
 }
