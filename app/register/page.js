@@ -1,37 +1,36 @@
-"use client"
+"use client";
 import React, { useState } from 'react';
-import {registerUser} from "../serverActions/userActions";
+import { registerUser } from "../serverActions/userActions";
 
 const Register = () => {
   const [info, setInfo] = useState({ username: '', email: '', password: '' });
-  const [feedback, setFeedback] = useState({type: "", msg: ""});
+  const [feedback, setFeedback] = useState({ type: "", msg: "" });
   const [pending, setPending] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setInfo((prev)=>({
+    setInfo((prev) => ({
       ...prev,
-      [e.target.name]: e.target.value,
+      [name]: value,
     }));
   };
 
-  async function handleSubmit (e) {
+  async function handleSubmit(e) {
     e.preventDefault();
-    if(!info.username||!info.email||!info.password){
+    if (!info.username || !info.email || !info.password) {
+      setFeedback({ type: "error", msg: 'Please fill in all fields.' });
+      return;
+    }
     setPending(true);
-    setFeedback((prev)=>({...prev,type:"error",msg:'Registration successful!'}))
-    return;
-}
-setPending(true);
-try {
-  const res = await registerUser(info);
-  
-} catch (error) {
-}
-}
-    
-    
-  };
+    try {
+      const res = await registerUser(info);
+      setFeedback({ type: "success", msg: 'Registration successful!' });
+    } catch (error) {
+      setFeedback({ type: "error", msg: 'Registration failed. Please try again.' });
+    } finally {
+      setPending(false);
+    }
+  }
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
@@ -82,9 +81,9 @@ try {
             </button>
           </div>
         </form>
-        {feedback && (
-          <div className="mt-4 text-center text-green-500">
-            {feedback}
+        {feedback.msg && (
+          <div className={`mt-4 text-center ${feedback.type === "error" ? "text-red-500" : "text-green-500"}`}>
+            {feedback.msg}
           </div>
         )}
       </div>
