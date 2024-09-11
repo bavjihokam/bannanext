@@ -2,18 +2,7 @@
 import { useState } from 'react';
 
 const testPage = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: ''
-  });
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value
-    });
-  };
+  
 
   const handleSaction = () => {
     "use server"
@@ -29,8 +18,6 @@ const testPage = () => {
           type="text"
           id="name"
           name="name"
-          value={formData.name}
-          onChange={handleChange}
           className="border p-2"
           required
         />
@@ -39,8 +26,6 @@ const testPage = () => {
           type="email"
           id="email"
           name="email"
-          value={formData.email}
-          onChange={handleChange}
           className="border p-2"
           required
         />
