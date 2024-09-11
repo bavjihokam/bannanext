@@ -3,7 +3,7 @@ import { useState } from 'react';
 const testPage = () => {
   
 
-  const handleSaction = () => {
+  const handleSaction = async () => {
     "use server"
     console.log("server action triggred");
   };
