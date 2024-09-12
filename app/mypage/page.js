@@ -1,6 +1,4 @@
-
-
-const testPage = () => {
+function testPage (){
   
 
   const handleSaction = async () => {
@@ -18,7 +16,7 @@ const testPage = () => {
           id="name"
           name="name"
           className="border p-2"
-          required
+        
         />
         <label htmlFor="email" className="text-lg">Email:</label>
         <input
@@ -26,7 +24,7 @@ const testPage = () => {
           id="email"
           name="email"
           className="border p-2"
-          required
+          
         />
         <button type="submit" className="bg-blue-500 text-white p-2">Submit</button>
       </form>
