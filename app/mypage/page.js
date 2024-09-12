@@ -2,7 +2,7 @@ function testPage (){
   
 
   const handleSaction = async () => {
-    
+    "use server"
     console.log("server action triggred");
   };
 
